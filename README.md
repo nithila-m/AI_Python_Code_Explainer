@@ -19,7 +19,7 @@ The **AI Python Code Explainer** provides an intuitive interface for developers 
 
 ### Technical Overview
 
-Frontend - HTML, CSS, Javascript, Jinja2
-Backend - Python, PyTorch, Flask, HuggingFace Transformers
-Model - Gemma-3 by Google
+- Frontend - HTML, CSS, Javascript, Jinja2
+- Backend - Python, PyTorch, Flask, HuggingFace Transformers
+- Model - Gemma-3 by Google
 
