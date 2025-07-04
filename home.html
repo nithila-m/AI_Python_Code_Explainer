@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css')}}">
+    <script>
+        function disp(){
+
+            let inp = document.getElementById("inp1").value;
+            var addr = '/result?inp='+inp;
+            let res;
+            fetch(addr)
+            .then(response => {
+                if (response.ok) {
+                return response.text(); // Parse the response data as JSON
+                } else {
+                throw new Error('API request failed');
+                }
+            })
+            .then(data => {
+                // Process the response data here
+                this.res = data;
+                document.getElementById("res1").innerText = `${this.res}`;
+        
+                console.log(data); // Logging the data to the console
+            })
+            .catch(error => {
+                // Handle any errors here
+                this.res = error;
+                console.error(error); // Logging the error to the console
+            });
+            //document.getElementById("res1").innerText = `${this.res}`
+        }
+    </script>
+  </head>
+  
+  <body>
+    <h1>⭐️  AI Python Code Explainer  ⭐️</h1>
+    <h2>Get simple, accurate insights into what any Python code really does!</h2>
+    <form action="/form/submitBtn" method="get">
+      <textarea rows="10" id="inp1" style="width:98%" placeholder="Enter a python code snippet">
+        </textarea>
+
+        <button type="button" id="submitBtn" onclick="disp()">Enter</button>
+
+        <div>
+        <p id="res1" style="font-size: 14px;"></p>
+    </div>
+
+    </form>
+
+  </body>
+</html>

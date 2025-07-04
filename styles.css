@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(to right, #ba2ae6,#89bfd6, #ba2ae6);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin: 0 10% 0 10%;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 99%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+.p_style {
+    width: 500px;
+    margin: 5px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
